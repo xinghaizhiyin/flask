@@ -15,11 +15,11 @@ def getdata():
     datajson = json.loads(data[7:-9])
     id = 0
     cx = sqlite3.connect("test.db")
-    cx.execute('''
-    create table home(
-    id int primary key not null,
-    subjects TEXT);
-    ''')
+    # cx.execute('''
+    # create table home(
+    # id int primary key not null,
+    # subjects TEXT);
+    # ''')
     # cu = cx.cursor()
 
     for line in datajson['subjects']:
@@ -41,7 +41,7 @@ def setdata():
     list = []
     for row in cursor:
         list.append(row[1])
-    return list
+    return json.dumps(list, ensure_ascii=False)
 
 
 if __name__ == '__main__':

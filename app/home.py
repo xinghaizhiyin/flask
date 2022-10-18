@@ -22,6 +22,7 @@ class Config(object):
 
 @app.route('/home', methods=['get'])
 def hello_world():
+    print(data.setdata())
     return data.setdata()
 
 
