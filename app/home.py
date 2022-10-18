@@ -31,4 +31,4 @@ if __name__ == '__main__':
     home.init_app(app)
     home.start()
 
-    app.run(debug=True, host='127.0.0.1', port=5001)
+    app.run(host='127.0.0.1', port=5001)
