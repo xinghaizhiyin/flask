@@ -22,7 +22,6 @@ class Config(object):
 
 @app.route('/home', methods=['get'])
 def hello_world():
-    print(data.setdata())
     return data.setdata()
 
 
@@ -31,5 +30,6 @@ if __name__ == '__main__':
     home = APScheduler()
     home.init_app(app)
     home.start()
+    print(111)
 
     app.run(debug=True)

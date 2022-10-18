@@ -30,7 +30,6 @@ def getdata():
         sql = 'replace into home(id, subjects) values("%s","%s")' % (id, line)
         cx.execute(sql)
         id += 1
-        print(line)
         cx.commit()
 
 
