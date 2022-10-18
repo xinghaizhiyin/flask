@@ -32,4 +32,4 @@ if __name__ == '__main__':
     home.start()
     print(111)
 
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.1', port=5000)
