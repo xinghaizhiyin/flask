@@ -24,7 +24,7 @@ def hello_world():
     return data.setdata()
 
 
-@app.route('/class/vip', methods=["GET",'POST'])
+@app.route('/get_films/vip', methods=["GET",'POST'])
 def vip():
     id = request.args['id']  #类型
     address = request.args['address']  #地区
