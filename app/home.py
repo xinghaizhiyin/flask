@@ -26,7 +26,7 @@ def hello_world():
     return data.setdata()
 
 
-@app.route('/films/vip/', methods=["GET",'POST'])
+@app.route('/films/vip', methods=["GET",'POST'])
 def vip():
     if request.method == "POST":
         # if request.content_type.startswith('application/json'):
@@ -41,8 +41,8 @@ def vip():
         language = request.values['language']  #语言
         year = request.values['year']  #年份
         limit = request.values['limit']  #翻页
-        redirect('https://www.freeok.vip', code=301)
-        jsondata = getclass.getdata(id, address, arrange, plot, language, year, limit)
+        if (id, address, arrange, plot, language, year, limit) is not None:
+            data = getclass.getvip(id, address, arrange, plot, language, year, limit)
     if request.method == "GET":
         id = request.values['id']  #类型
         address = request.values['address']  #地区
@@ -51,8 +51,9 @@ def vip():
         language = request.values['language']  #语言
         year = request.values['year']  #年份
         limit = request.values['limit']  #翻页
-        jsondata = getclass.getdata(id, address, arrange, plot, language, year, limit)
-    return jsondata
+        if (id, address, arrange, plot, language, year, limit) is not None:
+            data = getclass.getvip(id, address, arrange, plot, language, year, limit)
+    return data
 
 
 if __name__ == '__main__':
