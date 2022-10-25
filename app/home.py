@@ -1,6 +1,6 @@
 import json
 
-from flask import Flask,request
+from flask import Flask,request,redirect
 import data, getclass
 from flask_apscheduler import APScheduler
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def hello_world():
     return data.setdata()
 
 
-@app.route('/films/vip', methods=["GET",'POST'])
+@app.route('/films/vip/', methods=["GET",'POST'])
 def vip():
     if request.method == "POST":
         # if request.content_type.startswith('application/json'):
@@ -41,6 +41,7 @@ def vip():
         language = request.values['language']  #语言
         year = request.values['year']  #年份
         limit = request.values['limit']  #翻页
+        redirect('https://www.freeok.vip', code=301)
         jsondata = getclass.getdata(id, address, arrange, plot, language, year, limit)
     if request.method == "GET":
         id = request.values['id']  #类型
