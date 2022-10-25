@@ -1,7 +1,5 @@
 from flask import Flask,request
 import data, getclass
-import datetime,json,jsonify
-from requests_html import HTMLSession
 from flask_apscheduler import APScheduler
 app = Flask(__name__)
 
