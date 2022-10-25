@@ -26,7 +26,7 @@ def hello_world():
     return data.setdata()
 
 
-@app.route('/get_films/vip', methods=["GET",'POST'])
+@app.route('/films/vip', methods=["GET",'POST'])
 def vip():
     if request.method == "POST":
         # if request.content_type.startswith('application/json'):
