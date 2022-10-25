@@ -12,6 +12,7 @@ def getdata():
     h = session.get(url=url)
     pattern = r'tv_热门.*?tv_日本动画'
     data = re.search(pattern, h.html.html).group()
+    print(data)
     datajson = json.loads(data[7:-9])
     id = 0
     cx = sqlite3.connect("test.db")
@@ -32,7 +33,6 @@ def getdata():
         id += 1
         cx.commit()
 
-
 def setdata():
     cx = sqlite3.connect("test.db")
     cursor = cx.execute("select * from home")
@@ -43,9 +43,11 @@ def setdata():
     return json.dumps(list, ensure_ascii=False)
 
 
+
 if __name__ == '__main__':
     getdata()
     setdata()
+
 
 
 

@@ -1,6 +1,7 @@
-from flask import Flask
-import data
-import datetime
+from flask import Flask,request
+import data, getclass
+import datetime,json,jsonify
+from requests_html import HTMLSession
 from flask_apscheduler import APScheduler
 app = Flask(__name__)
 
@@ -23,6 +24,19 @@ class Config(object):
 @app.route('/home', methods=['get'])
 def hello_world():
     return data.setdata()
+
+
+@app.route('/class/vip', methods=["GET",'POST'])
+def vip():
+    id = request.args['id']  #类型
+    address = request.args['address']  #地区
+    arrange = request.args['arrange']  #类型
+    plot = request.args['plot']  #排行
+    language = request.args['language']  #语言
+    year = request.args['year']  #年份
+    limit = request.args['limit']  #翻页
+    jsondata = getclass.getdata(id, address, arrange, plot, language, year, limit)
+    return jsondata
 
 
 if __name__ == '__main__':
