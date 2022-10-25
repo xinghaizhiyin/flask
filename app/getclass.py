@@ -1,7 +1,6 @@
 import sqlite3
 import re
 import requests
-
 import json
 from requests_html import HTMLSession
 
@@ -82,13 +81,13 @@ def setvip():
 def getdata(id=1, address= '',arrange='',plot='',language='',year='',limit=''):
     session = HTMLSession()
     url = "https://www.freeok.vip/vodshow/{0}-{1}-{2}-{3}-{4}----{6}---{5}.html".format(id, address, plot, arrange, language, year,limit)
-    h = session.get(url=url)
+    h = requests.get(url=url)
     pattern = 'original.*?referrerpolicy'
-    data = re.findall(pattern, h.html.html)
+    data = re.findall(pattern, h.text)
     patternone = 'note.*?div'
     patterntwo = '"/voddetail.*?title'
-    dataone = re.findall(patternone, h.html.html)
-    datatwo = re.findall(patterntwo, h.html.html)
+    dataone = re.findall(patternone, h.text)
+    datatwo = re.findall(patterntwo, h.text)
     list = []
     l = []
     t = []
