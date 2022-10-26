@@ -111,15 +111,15 @@ def getdata(id=1, address= '',arrange='',plot='',language='',year='',limit=''):
         idname = dict(zip(["icon"], t))
         sum = dict(dataname,**datajson)
         list.append(dict(idname, **sum))
-    list = dict(zip(["data"], [list]))
+    # list = dict(zip(["data"], [list]))
     return json.dumps(list, ensure_ascii=False)
 
 
 if __name__ == '__main__':
-    # getdata()
-    getvip(id=1)
+    getdata()
+    # getvip(id=1)
     # setvip()
-    print(getvip(id=1))
+    # print(getdata)
 
 
 

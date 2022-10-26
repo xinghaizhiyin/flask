@@ -41,7 +41,7 @@ def vip():
         language = request.values['language']  #语言
         year = request.values['year']  #年份
         limit = request.values['limit']  #翻页
-        data = getclass.getdata(id, address, arrange, plot, language, year, limit)
+        datajson = getclass.getdata(id, address, arrange, plot, language, year, limit)
     if request.method == "GET":
         id = request.values['id']  #类型
         address = request.values['address']  #地区
@@ -50,8 +50,8 @@ def vip():
         language = request.values['language']  #语言
         year = request.values['year']  #年份
         limit = request.values['limit']  #翻页
-        data = getclass.getdata(id, address, arrange, plot, language, year, limit)
-    return data
+        datajson = getclass.getdata(id, address, arrange, plot, language, year, limit)
+    return datajson
 
 
 if __name__ == '__main__':
