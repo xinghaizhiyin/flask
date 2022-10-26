@@ -78,16 +78,17 @@ def setvip():
     return json.dumps(list, ensure_ascii=False)
 
 
-def getdata(id=1, address= '',arrange='',plot='',language='',year='',limit=''):
+def getdata():
     session = HTMLSession()
-    url = "https://www.freeok.vip/vodshow/{0}-{1}-{2}-{3}-{4}----{6}---{5}.html".format(id, address, plot, arrange, language, year,limit)
-    h = requests.get(url=url)
+    # url = "https://www.freeok.vip/vodshow/{0}-{1}-{2}-{3}-{4}----{6}---{5}.html".format(id, address, plot, arrange, language, year,limit)
+    url = 'https://www.freeok.vip/vodshow/1-----------.html'
+    h = session.get(url=url)
     pattern = 'original.*?referrerpolicy'
-    data = re.findall(pattern, h.text)
+    data = re.findall(pattern, h.html.html)
     patternone = 'note.*?div'
     patterntwo = '"/voddetail.*?title'
-    dataone = re.findall(patternone, h.text)
-    datatwo = re.findall(patterntwo, h.text)
+    dataone = re.findall(patternone, h.html.html)
+    datatwo = re.findall(patterntwo, h.html.html)
     list = []
     l = []
     t = []
@@ -116,9 +117,9 @@ def getdata(id=1, address= '',arrange='',plot='',language='',year='',limit=''):
 
 if __name__ == '__main__':
     # getdata()
-    getvip(id=1)
+    # getvip(id=1)
     # setvip()
-    print(getvip(id=1))
+    print(getdata())
 
 
 

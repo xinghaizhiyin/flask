@@ -28,30 +28,33 @@ def hello_world():
 
 @app.route('/films/vip', methods=["GET",'POST'])
 def vip():
-    if request.method == "POST":
-        # if request.content_type.startswith('application/json'):
-        #     comment = request.json.get('content')
-        # elif request.content_type.startswith('ultipart/for-data'):
-        #     comment = request.form.get('content')
-        # else:
-        id = request.values['id']  #类型
-        address = request.values['address']  #地区
-        arrange = request.values['arrange']  #类型
-        plot = request.values['plot']  #排行
-        language = request.values['language']  #语言
-        year = request.values['year']  #年份
-        limit = request.values['limit']  #翻页
-        data = getclass.getdata(id, address, arrange, plot, language, year, limit)
-    if request.method == "GET":
-        id = request.values['id']  #类型
-        address = request.values['address']  #地区
-        arrange = request.values['arrange']  #类型
-        plot = request.values['plot']  #排行
-        language = request.values['language']  #语言
-        year = request.values['year']  #年份
-        limit = request.values['limit']  #翻页
-        data = getclass.getdata(id, address, arrange, plot, language, year, limit)
-    return data
+
+        data = getclass.getdata()
+        return data
+    # if request.method == "POST":
+    #     # if request.content_type.startswith('application/json'):
+    #     #     comment = request.json.get('content')
+    #     # elif request.content_type.startswith('ultipart/for-data'):
+    #     #     comment = request.form.get('content')
+    #     # else:
+    #     id = request.values['id']  #类型
+    #     address = request.values['address']  #地区
+    #     arrange = request.values['arrange']  #类型
+    #     plot = request.values['plot']  #排行
+    #     language = request.values['language']  #语言
+    #     year = request.values['year']  #年份
+    #     limit = request.values['limit']  #翻页
+    #     data = getclass.getdata(id, address, arrange, plot, language, year, limit)
+    # if request.method == "GET":
+    #     id = request.values['id']  #类型
+    #     address = request.values['address']  #地区
+    #     arrange = request.values['arrange']  #类型
+    #     plot = request.values['plot']  #排行
+    #     language = request.values['language']  #语言
+    #     year = request.values['year']  #年份
+    #     limit = request.values['limit']  #翻页
+    #     data = getclass.getdata(id, address, arrange, plot, language, year, limit)
+    # return data
 
 
 if __name__ == '__main__':
