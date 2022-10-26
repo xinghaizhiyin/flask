@@ -52,7 +52,7 @@ def vip():
         #     comment = request.form.get('content')
         # else:
         # 从数据库取
-        if address == '' and arrange == '' and plot == '' and language == '' and year == '' and limit == '':
+        if address == '' and arrange == '' and plot == '' and language == '' and year == '' and limit == '1':
             if id == 1 :
                 return getclass.setvip(id)
             elif id == 2:
@@ -64,7 +64,7 @@ def vip():
             return datajson
     elif request.method == "GET":
         # 从数据库取
-        if address == '' and arrange == ''and plot == ''and language == ''and year == ''and limit == '':
+        if address == '' and arrange == ''and plot == ''and language == ''and year == ''and limit == '1':
             if id == 1:
                 return getclass.setvip(id)
             elif id == 2:
