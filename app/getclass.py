@@ -39,7 +39,7 @@ def getvip(id=1):
         datatext = datatext.replace("original", '"original"')
         datatext = datatext.replace("alt", '"alt"')
         datatext = datatext.replace(" ", ',')
-        datatext = "{" + datatext + "}"
+        datatext = "{" + datatext + '"' + "}"
         datajson = json.loads(datatext)
         list.append(datajson['original'])
         listone.append(datajson['alt'])
@@ -137,10 +137,10 @@ def getdata(id='', address='', arrange='', plot='', language='', year='', limit=
 
 if __name__ == '__main__':
     # getdata()
-    # getvip(1)
+    getvip(1)
     # setvip()
-    print(setvip(3))
-    print(getdata())
+    # print(setvip(3))
+    # print(getdata())
 
 
 
