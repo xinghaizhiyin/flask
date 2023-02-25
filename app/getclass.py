@@ -118,7 +118,7 @@ def getdata(id='', address='', arrange='', plot='', language='', year='', limit=
         datatext = datatext.replace("original", '"img"')
         datatext = datatext.replace("alt", '"name"')
         datatext = datatext.replace(" ", ',')
-        datatext = "{" + datatext + "}"
+        datatext = "{" + datatext + '"' + "}"
         datajson = json.loads(datatext)
         for itemone in dataone:
             name = itemone[6:-5]
@@ -136,8 +136,8 @@ def getdata(id='', address='', arrange='', plot='', language='', year='', limit=
 
 
 if __name__ == '__main__':
-    # getdata()
-    getvip(1)
+    getdata()
+    # getvip(1)
     # setvip()
     # print(setvip(3))
     # print(getdata())
