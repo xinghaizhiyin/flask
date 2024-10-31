@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package openai;
+
+message LoginMessage { string username = 1; string password = 2; string platform_id = 3; string os_id = 4; string client_version = 5; string challenge_response = 6; string payload = 7; }
+
+message LoginResponse { bool success = 1; string message = 2; }
+
+message InputData { string text = 1; string sessionId = 2; }
+
+message OutputData { string text = 1; string sessionId = 2; }
+
+service OpenAi { rpc Login(LoginMessage) returns (LoginResponse) {} rpc TextToText(InputData) returns (OutputData) {} }

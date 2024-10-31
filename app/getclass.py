@@ -27,6 +27,7 @@ def getvip(id=1):
     print(url)
     pattern = 'original.*?referrerpolicy'
     data = re.findall(pattern, h.html.html)
+    print(data)
     patternone = 'note.*?div'
     dataone = re.findall(patternone, h.html.html)
     list = []
@@ -136,8 +137,8 @@ def getdata(id='', address='', arrange='', plot='', language='', year='', limit=
 
 
 if __name__ == '__main__':
-    getdata()
-    # getvip(1)
+    # getdata()
+    getvip(1)
     # setvip()
     # print(setvip(3))
     # print(getdata())
