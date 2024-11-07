@@ -1,4 +1,12 @@
+# 更新代码
+git add .
+
+git commit -m '更新内容'
+
+git push flask master
+
 # flask接口 和 性能测试
+
 
 ## JMETER工具链接
 性能/jmeter
