@@ -1,2 +1,6 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4653","test_taobao_homepage","","Thu Nov 07 11:42:09 CST 2024","failed","Thu Nov 07 11:42:14 CST 2024","","test_demo","",""
+"","0","test_add[2-3-5]","","Thu Nov 07 13:20:12 CST 2024","passed","Thu Nov 07 13:20:12 CST 2024","","test_demo","",""
+"","0","test_addition","","Thu Nov 07 13:20:12 CST 2024","passed","Thu Nov 07 13:20:12 CST 2024","","test_demo","",""
+"","1","test_add[1-2-3]","","Thu Nov 07 13:20:12 CST 2024","passed","Thu Nov 07 13:20:12 CST 2024","","test_demo","",""
+"","0","test_add[3-4-7]","","Thu Nov 07 13:20:12 CST 2024","passed","Thu Nov 07 13:20:12 CST 2024","","test_demo","",""
+"","4628","test_taobao_homepage","","Thu Nov 07 13:20:07 CST 2024","failed","Thu Nov 07 13:20:12 CST 2024","","test_demo","",""

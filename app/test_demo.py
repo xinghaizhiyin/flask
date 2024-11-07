@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
+import sys
 
 @pytest.fixture(scope="module")
 def driver():
@@ -33,3 +34,18 @@ def test_taobao_homepage(driver):
 
     with allure.step("输出测试成功信息"):
         print("淘宝网主页测试成功")
+
+def test_addition():
+    assert 1 + 1 == 2
+
+@pytest.mark.parametrize("a, b, result", [(1, 2, 3), (2, 3, 5), (3, 4, 7)])
+def test_add(a, b, result):
+    assert a + b == result
+
+@pytest.mark.skipif(sys.version_info < (3, 0), reason="requires Python 3")
+def test_python_version():
+    assert sys.version_info >= (3, 0)
+
+@pytest.mark.smoke
+def test_smoke_test():
+    assert 1 + 1 == 2
