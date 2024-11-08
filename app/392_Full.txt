@@ -1,33 +1,0 @@
-POST https://login5.spotify.com/v3/login HTTP/1.1
-Host: login5.spotify.com
-Connection: keep-alive
-Content-Length: 338
-Pragma: no-cache
-Cache-Control: no-cache, no-store, max-age=0
-Content-Type: application/x-protobuf
-User-Agent: Spotify/121000760 Win32/0 (PC desktop)
-client-token: AADgazMardrfzZ6WHVQFX0ynlaKsorIXXMaIp9N7MGuQyCWf0zX9m7YkU/7rupfBX15AOwPCJ2diFc9K52mOR+JMQF7F9kljPBZzcnSsca5rAVt7ZZgj58KtsdKkBOGFA9JnTBoND/+zot93Uw/cZ0l5Y46+kWAsCCkPgDo7IL0dawKvby3yGk2U5vwlgpMlOTF2T25db2ZZCdExNDaE0AXA1ErgK2G/T6NwybJFp2iPPARr6PBhndyz3MmcGtDjYg==
-Accept-Language: zh-CN,zh;q=0.9
-Origin: https://login5.spotify.com
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: empty
-Accept-Encoding: gzip, deflate, br
-
-
-K
- 65b708073fc0480ea92a077233ca87bd'S-1-5-21-815706972-612705730-2558123853¢Å
-31ishtss2lmmmryeegq3whe2zkmy‡AQBNfDxmq-9TFs2nsVcZ-uIHD1RbUQMnnsrcsDnUbWCZFpgWSHdjvsODR45aDaQGyqC3FnSa1_t94TShwXGPoWa-r9yZojUK66kTWCajZeNqJismarYIFTSKhi4gpdXnGg5NVsRGKUuplF6WdiAjz7SECk7LXKA0qdUeRgQYtoTDjTXSs5LlICxL1rmUCB2mVWAmf6vSPjESyZhUN04bTcwX1JZV9NdN
-HTTP/1.1 200 OK
-cache-control: private, max-age=0
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-date: Mon, 15 May 2023 12:05:17 GMT
-server: envoy
-Via: HTTP/2 edgeproxy, 1.1 google
-Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-Content-Length: 645
-
-
-Ç
-31ishtss2lmmmryeegq3whe2zkmy˚BQDDHIgpuHxFi5W1EA96OISE4zL6p4Mw5GqGyXC1LMl2rJ21KdLu_O_yaP0h4o64K4egt_uT5p7ORZPBDAkn1_JoLCc47QyPgjKS4HczjHDlztVetfbBCro8N2Fcy8-NmyHmxJer4-DMp7wO6VueY-lMcagYRUTbZaxCTWd6rTSjjn7lnbJ465eSB7areBzNDLHKEt0fODITCwDdN2-DYKJ8LYanhzGBiq434pCoyEuC_q32k_jFxSiw2-Jw-mmik88Rp9GBvvwmUM51kWWIe8M44T_NX3ra-aZjdmzXEIqcDoJ8iNNJgR5rEGjUnkTk52pjYhaFLIKf34o8oQ1osqzktaSSXX6FJ9S-D0Q6OoJCQDtO93bry8bP8p4‡AQBNfDxmq-9TFs2nsVcZ-uIHD1RbUQMnnsrcsDnUbWCZFpgWSHdjvsODR45aDaQGyqC3FnSa1_t94TShwXGPoWa-r9yZojUK66kTWCajZeNqJismarYIFTSKhi4gpdXnGg5NVsRGKUuplF6WdiAjz7SECk7LXKA0qdUeRgQYtoTDjTXSs5LlICxL1rmUCB2mVWAmf6vSPjESyZhUN04bTcwX1JZV9NdN ê
