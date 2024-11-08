@@ -49,3 +49,4 @@ def test_python_version():
 @pytest.mark.smoke
 def test_smoke_test():
     assert 1 + 1 == 2
+

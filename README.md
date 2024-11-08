@@ -26,3 +26,22 @@ pytest --alluredir ./report
 allure serve ./report(注意全局)
 
 allure generate report --clean -o allure-report（本地报告，其他设备可以打开）
+
+# Appium 测试
+
+您可以使用 npm 在全局范围内安装 Appium：
+
+npm i -g appium
+
+安装完成后，您应该可以从命令行运行 Appium：
+
+appium
+
+获取app信息
+
+C:\Users\Administrator>aapt dump badging C:\Users\Administrator\PycharmProjects\flask\driver\12.apk
+
+安装驱动本身¶
+由于 UiAutomator2 驱动是由核心 Appium 团队维护的，它有一个官方的驱动名称，你可以通过 Appium 扩展 CLI 轻松安装：
+
+appium driver install uiautomator2
