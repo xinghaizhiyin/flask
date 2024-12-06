@@ -29,6 +29,10 @@ allure generate report --clean -o allure-report（本地报告，其他设备可
 
 # Appium 测试
 
+下载 Appium Desktop定位
+
+https://github.com/appium/appium-inspector/releases
+
 您可以使用 npm 在全局范围内安装 Appium：
 
 npm i -g appium
