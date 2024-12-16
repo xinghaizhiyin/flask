@@ -64,7 +64,10 @@ def write_realtime_data_to_db():
 
             # 将实时数据插入数据库
             for index, row in stock_list.iterrows():
+                print(index)
+
                 data = prepare_data_for_insertion(row)
+                print(data)
                 db.insert_data("real_time_data", data)
 
             db.close()
