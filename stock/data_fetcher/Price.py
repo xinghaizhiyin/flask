@@ -3,8 +3,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 import time
-from A.database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
-from A.database.MySQLTable import seven_day_columns, thirty_day_columns, three_sixty_day_columns
+from ..database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
+from ..database.MySQLTable import seven_day_columns, thirty_day_columns, ninety_day_columns
 
 
 # 设置 pandas 打印选项，确保显示完整数据

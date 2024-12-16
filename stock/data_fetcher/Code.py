@@ -1,7 +1,7 @@
 import akshare as ak
 from datetime import datetime
-from A.database.MySQLDatabase import MySQLDatabase  # 确保这个导入路径正确
-from A.database.MySQLTable import stockcodes_columns  # 假设你已经定义了 stockcodes_columns
+from ..database.MySQLDatabase import MySQLDatabase  # 确保这个导入路径正确
+from ..database.MySQLTable import stockcodes_columns  # 假设你已经定义了 stockcodes_columns
 
 # 数据库连接参数
 db_params = {

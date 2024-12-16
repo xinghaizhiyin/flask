@@ -1,5 +1,5 @@
 import pymysql
-from A.database.MySQLTable import merged_columns  # 导入表结构
+from ..database.MySQLTable import merged_columns  # 导入表结构
 
 class StockDataMerger:
     def __init__(self, db_params):

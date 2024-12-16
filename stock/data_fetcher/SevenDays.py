@@ -2,8 +2,8 @@ import akshare as ak
 import pandas as pd
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
-from A.database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
-from A.database.MySQLTable import seven_day_columns, thirty_day_columns, ninety_day_columns  # 导入不同的表结构
+from ..database.MySQLDatabase import MySQLDatabase
+from ..database.MySQLTable import seven_day_columns, thirty_day_columns, ninety_day_columns  # 导入不同的表结构
 
 # 设置 pandas 打印选项，确保显示完整数据
 pd.set_option('display.max_rows', None)  # 显示所有行

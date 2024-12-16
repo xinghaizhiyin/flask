@@ -1,8 +1,8 @@
 import akshare as ak
 import pandas as pd
 from datetime import datetime
-from A.database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
-from A.database.MySQLTable import real_time_columns
+from ..database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
+from ..database.MySQLTable import real_time_columns
 
 # 设置 pandas 打印选项，确保显示完整数据
 pd.set_option('display.max_rows', None)  # 显示所有行

@@ -1,8 +1,8 @@
 import pandas as pd
 from datetime import timedelta
-from A.database.MySQLDatabase import MySQLDatabase
+from stock.database.MySQLDatabase import MySQLDatabase
 
-class Search:
+class Home:
     def __init__(self, db_params):
         """初始化数据库连接"""
         self.db = MySQLDatabase(
@@ -39,36 +39,25 @@ class Search:
         # 转换为字典格式
         return data.to_dict(orient='records')
 
-    def get_data_by_search(self, search_param):
-        """根据 search_param（可能是 stock_code 或 stock_name）模糊查询数据"""
-        try:
-            # 使用封装好的方法执行模糊查询
-            table_name = 'merged_stock_data'
-            df = self.db.get_data_by_search(table_name, search_param)
-            return df
-        except Exception as e:
-            print(f"查询失败: {e}")
-            return pd.DataFrame()  # 返回空 DataFrame，表示查询失败
+    def merge_three_data(self, threshold=10):
+        """合并 merged_stock_data 表数据，并根据 latest_price 过滤数据"""
+        print("开始获取数据...")
 
-    def get_favorites(self):
-        """查询所有 is_favorite = 1 的记录"""
-        try:
-            table_name = 'merged_stock_data'
+        # 获取 merged_stock_data 表数据
+        merged_stock_data = self.fetch_data('merged_stock_data')
+        if not merged_stock_data:
+            print("获取 merged_stock_data 失败")
+            return None
 
-            df = self.db.get_favorites(table_name)
-            return df  # 返回空 DataFrame
-        except Exception as e:
-            print(f"发生未知错误: {e}")
-            return pd.DataFrame()  # 返回空 DataFrame
+        # 过滤数据：只保留 latest_price 小于 threshold 的记录
+        filtered_data = [record for record in merged_stock_data if record['latest_price'] < threshold]
 
-    def add_favorite_status(self, stock_code, is_favorite):
-        """查询所有 is_favorite = 1 的记录"""
-        try:
-            df = self.db.update_favorite_status(stock_code, is_favorite)
-            return df  # 返回空 DataFrame
-        except Exception as e:
-            print(f"发生未知错误: {e}")
-            return pd.DataFrame()  # 返回空 DataFrame
+        # 将数据转换为 DataFrame 方便操作
+        merged_df = pd.DataFrame(filtered_data)
+
+        # 转换为字典格式
+        merged_data = merged_df.to_dict(orient='records')
+        return merged_data
 
     def close(self):
         """关闭数据库连接"""

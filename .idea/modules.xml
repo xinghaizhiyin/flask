@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/flask.iml" filepath="$PROJECT_DIR$/.idea/flask.iml" />
       <module fileurl="file://$USER_HOME$/Documents/vue/my-flask/.idea/my-flask.iml" filepath="$USER_HOME$/Documents/vue/my-flask/.idea/my-flask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../stock/.idea/stock.iml" filepath="$PROJECT_DIR$/../stock/.idea/stock.iml" />
     </modules>
   </component>
 </project>

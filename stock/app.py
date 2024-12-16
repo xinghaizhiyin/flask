@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 import logging
-from data_fetcher.SevenDays import main  # 假设你在 data_fetcher.SevenDays 中定义了 main 函数
 from scheduler_module.scheduler import start_scheduler, run_fetch_task  # 从 scheduler 模块导入任务调度器
 from flask_cors import CORS  # 导入 CORS
 from Page.home import Home

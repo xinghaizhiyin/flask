@@ -1,9 +1,9 @@
 # scheduler.py
 from apscheduler.schedulers.background import BackgroundScheduler  # 导入后台调度器
 from apscheduler.triggers.cron import CronTrigger  # 导入Cron触发器，用于定时任务
-from A.data_fetcher.SevenDays import main  # 导入封装好的模块，用于获取数据
-from A.data_fetcher.RealTime import write_realtime_data_to_db  # 导入封装好的模块，用于获取数据
-from A.Analysis.ATable import process_and_insert_stock_data  # 导入封装好的模块，用于获取数据
+from stock.data_fetcher.SevenDays import main  # 导入封装好的模块，用于获取数据
+from stock.data_fetcher.RealTime import write_realtime_data_to_db  # 导入封装好的模块，用于获取数据
+from stock.Analysis.ATable import process_and_insert_stock_data  # 导入封装好的模块，用于获取数据
 
 
 import logging  # 导入日志模块
