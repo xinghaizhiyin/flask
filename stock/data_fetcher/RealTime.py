@@ -1,8 +1,8 @@
 import akshare as ak
 import pandas as pd
 from datetime import datetime
-from ..database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
-from ..database.MySQLTable import real_time_columns
+from stock.database.MySQLDatabase import MySQLDatabase  # 修改为正确的数据库模块导入
+from stock.database.MySQLTable import real_time_columns
 
 # 设置 pandas 打印选项，确保显示完整数据
 pd.set_option('display.max_rows', None)  # 显示所有行
@@ -23,6 +23,7 @@ def fetch_realtime_stock_data():
     """获取沪深A股实时数据"""
     try:
         stock_list = ak.stock_zh_a_spot()
+        print(stock_list)
         return stock_list
     except Exception as e:
         print(f"获取实时股票数据时发生错误: {e}")
@@ -64,10 +65,7 @@ def write_realtime_data_to_db():
 
             # 将实时数据插入数据库
             for index, row in stock_list.iterrows():
-                print(index)
-
                 data = prepare_data_for_insertion(row)
-                print(data)
                 db.insert_data("real_time_data", data)
 
             db.close()
