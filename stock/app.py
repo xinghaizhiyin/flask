@@ -1,10 +1,13 @@
 from flask import Flask, jsonify, request
 import logging
-from scheduler_module.scheduler import start_scheduler, run_fetch_task  # 从 scheduler 模块导入任务调度器
+from .scheduler_module.scheduler import start_scheduler, run_fetch_task  # 从 scheduler 模块导入任务调度器
 from flask_cors import CORS  # 导入 CORS
-from Page.home import Home
-from Page.search import Search
+from .Page.home import Home
+from .Page.search import Search
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 app = Flask(__name__)
 CORS(app)
