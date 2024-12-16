@@ -19,7 +19,7 @@ def main():
     )
 
     # 假设你要查询的表名为 "video_data"
-    table_name = 'xiaohongshu'
+    table_name = 'stock_rankings'
 
     # 调用查询函数，获取表中所有数据
     try:

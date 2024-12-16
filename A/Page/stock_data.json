@@ -1,0 +1,18 @@
+{
+    "real_time_data": [
+        {
+            "id": 1,
+            "stock_code": "bj430017",
+            "stock_name": "星昊医药",
+            "latest_price": 15.91,
+            "change_amt": -0.11,
+            "change_pct": -0.687,
+            "buy_price": 15.91,
+            "sell_price": 15.92,
+            "previous_close": 16.02,
+            "today_open": 15.86,
+            "highest_price": 16.24,
+            "lowest_price": 15.73,
+            "volume": 1949400.0,
+            "amount": 31181700.0,
+            "timestamp": 
